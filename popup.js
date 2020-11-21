@@ -62,7 +62,7 @@ function hello() {
                 break;
             }
             }
-        alert('hello ' + currentUrl);
+        alert('status: ' + x);
 
     });
 
@@ -84,7 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("darkSwitch").addEventListener('click', hello);
     alert("DOM Loaded");
 });
-  
+ 
+
+//var x = document.getElementById("darkSwitch").checked;
+var x = document.querySelector('.messageCheckbox').checked;
 document.getElementById('hello').addEventListener('click', hello);
   
 
