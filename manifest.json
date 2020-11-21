@@ -1,0 +1,49 @@
+{
+  "short_name": "BBL Dark",
+  "name": "BBL Dark Mode",
+  "description": "BBL Darkmode for MCL",
+  "version": "1.0", 
+
+  "icons": {
+    "16": "icons/icon_19.png",
+    "48": "icons/icon_19.png",
+    "128": "icons/icon_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "https://mcl.blackboard.com/ultra/institution-page",
+    "https://mcl.blackboard.com/ultra/profile",
+    "https://mcl.blackboard.com/ultra/stream",
+    "https://mcl.blackboard.com/ultra/course",
+    "https://mcl.blackboard.com/ultra/organization",
+    "https://mcl.blackboard.com/ultra/calendar",
+    "https://mcl.blackboard.com/ultra/messages",
+    "https://mcl.blackboard.com/ultra/grades",
+    "https://mcl.blackboard.com/ultra/tools"
+
+  ],
+
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "BBL Dark",
+    "default_icon": "icons/icon_19.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://mcl.blackboard.com/ultra/institution-page",
+      "https://mcl.blackboard.com/ultra/profile",
+      "https://mcl.blackboard.com/ultra/stream",
+      "https://mcl.blackboard.com/ultra/course",
+      "https://mcl.blackboard.com/ultra/organization",
+      "https://mcl.blackboard.com/ultra/calendar",
+      "https://mcl.blackboard.com/ultra/messages",
+      "https://mcl.blackboard.com/ultra/grades",
+      "https://mcl.blackboard.com/ultra/tools"],
+      "exclude_matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+
+  ]
+}
