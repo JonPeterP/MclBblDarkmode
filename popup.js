@@ -50,6 +50,35 @@ document.addEventListener('DOMContentLoaded', function () {
     alert("DOM Loaded");
 });
 }
+
+
+
+
+//SOME SHITS
+import browser from 'webextension-polyfill'
+
+function insertCSS(file) {
+  const style = document.createElement('link')
+  style.rel = 'stylesheet'
+  style.type = 'text/css'
+  style.href = browser.extension.getURL('bbl_dark_mode.css')
+  style.id = file
+  document.getElementsByTagName('html')[0].appendChild(style)
+}
+
+function removeCSS(file) {
+  const cssNode = document.getElementById(file)
+  cssNode && cssNode.parentNode.removeChild(cssNode)
+}
+
+browser.runtime.onMessage.addListener(message => {
+  const id = 'redact-the-web'
+  if (message.command === 'insertCSS') {
+    insertCSS(id)
+  } else if (message.command === 'removeCSS') {
+    removeCSS(id)
+  }
+})
 */
 
 var x;
@@ -89,8 +118,12 @@ function hello() {
                     break;
                 }
             }
+
+            var body = document.body;
+
+            body.classList.add("MyClass");
         }else{
-            
+            document.getElementById("body").classList.remove('newClass');
         }
 
 
@@ -99,10 +132,7 @@ function hello() {
     
   }
 
-  function removeCSS(file) {
-    const cssNode = document.getElementById(file)
-    cssNode && cssNode.parentNode.removeChild(cssNode)
-  }
+  
 
   // Restores checkbox state using the preferences stored in chrome.storage.sync
 
@@ -110,6 +140,8 @@ function hello() {
 function checkCheckbox() {
     x = document.getElementById("darkSwitch").checked;
 }
+
+
 
 document.getElementById('darkSwitch').addEventListener('click', hello);
 document.getElementById('hello').addEventListener('click', hello);
