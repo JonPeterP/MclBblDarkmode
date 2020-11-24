@@ -81,7 +81,9 @@ browser.runtime.onMessage.addListener(message => {
 })
 */
 
-var x;
+var switchStatus;
+
+var cssFile = "bbl_dark_mode";
 
 const urls = ["https://mcl.blackboard.com/ultra/institution-page",
 "https://mcl.blackboard.com/ultra/profile",
@@ -105,25 +107,31 @@ function hello() {
     checkCheckbox();
 
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+      
         let currentUrl = tabs[0].url;
         
-        alert('status: ' + x);
+        //console.log(currentUrl);
+        alert('status: ' +  currentUrl);
 
-        if(x){
+        if(switchStatus){
             // use `url` here inside the callback because it's asynchronous!
             for(i = 0; i < urls.length; i++){
                 if(currentUrl == urls[i]){
-                    chrome.tabs.insertCSS(null, { file: "bbl_dark_mode.css" });
+                    //chrome.tabs.insertCSS(null, { file: "bbl_dark_mode.css" });
                     //alert('turning to dark mode');
+                    //loadCSS(cssFile);
+                    //loadCSS("bbl_dark_mode.css");
+                    addCss("bbl_dark_mode.css");
                     break;
                 }
             }
 
             var body = document.body;
 
-            body.classList.add("MyClass");
+            //body.classList.add("JMaylinCustomStyles");
         }else{
-            document.getElementById("body").classList.remove('newClass');
+            chrome.tabs.insertCSS(null, { file: "light_mode.css" });
+          //  document.getElementById("body").classList.remove('JMaylinCustomStyles');
         }
 
 
@@ -132,13 +140,45 @@ function hello() {
     
   }
 
+  function loadCSS(filename){ 
+
+    var file = document.createElement("link");
+    file.setAttribute("rel", "stylesheet");
+    file.setAttribute("type", "text/css");
+    file.setAttribute("href", filename);
+    document.head.appendChild(file);
+    alert(file);
+ }
+
+ function addCss(fileName) {
+
+    var head = document.body;
+    var link = document.createElement("link");
+  
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = fileName;
+  
+    head.appendChild(link);
+  }
+
+
+  function loadCSSasdaklsjlkas(file) {
+    var link = document.createElement("link");
+    link.href = chrome.runtime.getURL(file + '.css');
+    link.id = file;
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    console.log(link);
+    document.getElementsByTagName("body")[0].appendChild(link);
+  }
   
 
   // Restores checkbox state using the preferences stored in chrome.storage.sync
 
  
 function checkCheckbox() {
-    x = document.getElementById("darkSwitch").checked;
+    switchStatus = document.getElementById("darkSwitch").checked;
 }
 
 
