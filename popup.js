@@ -119,18 +119,19 @@ function hello() {
                 if(currentUrl == urls[i]){
                     //chrome.tabs.insertCSS(null, { file: "bbl_dark_mode.css" });
                     //alert('turning to dark mode');
-                    //loadCSS(cssFile);
+                    
                     //loadCSS("bbl_dark_mode.css");
-                    addCss("bbl_dark_mode.css");
+                    addCss('bbl_dark_mode.css');
+                    
                     break;
-                }
+               }
             }
 
-            var body = document.body;
-
-            //body.classList.add("JMaylinCustomStyles");
+           
         }else{
-            chrome.tabs.insertCSS(null, { file: "light_mode.css" });
+          //turn to light mode here
+
+            //chrome.tabs.insertCSS(null, { file: "light_mode.css" });
           //  document.getElementById("body").classList.remove('JMaylinCustomStyles');
         }
 
@@ -140,39 +141,36 @@ function hello() {
     
   }
 
-  function loadCSS(filename){ 
-
-    var file = document.createElement("link");
-    file.setAttribute("rel", "stylesheet");
-    file.setAttribute("type", "text/css");
-    file.setAttribute("href", filename);
-    document.head.appendChild(file);
-    alert(file);
- }
-
- function addCss(fileName) {
-
-    var head = document.body;
-    var link = document.createElement("link");
   
+
+ function addCss(fileName) {  
+
+    var head = document.head;
+    var link = document.createElement("div");
+  
+    link.id = fileName;
     link.type = "text/css";
     link.rel = "stylesheet";
-    link.href = fileName;
+    link.href = chrome.extension.getURL(fileName);
   
+    //alert(link);
     head.appendChild(link);
+    alert(document.head);
   }
 
 
-  function loadCSSasdaklsjlkas(file) {
+
+  function loadCSS(file) {
     var link = document.createElement("link");
-    link.href = chrome.runtime.getURL(file + '.css');
+    link.href = chrome.extension.getURL(file + '.css');
     link.id = file;
     link.type = "text/css";
     link.rel = "stylesheet";
-    console.log(link);
-    document.getElementsByTagName("body")[0].appendChild(link);
+    document.getElementsByTagName("head")[0].appendChild(link);
   }
   
+
+
 
   // Restores checkbox state using the preferences stored in chrome.storage.sync
 
@@ -186,6 +184,5 @@ function checkCheckbox() {
 document.getElementById('darkSwitch').addEventListener('click', hello);
 document.getElementById('hello').addEventListener('click', hello);
   
-
 
 
