@@ -10,6 +10,7 @@
     "128": "icons/icon_128.png"
   },
   "permissions": [
+    "activeTab",
     "tabs",
     "https://mcl.blackboard.com/ultra/institution-page",
     "https://mcl.blackboard.com/ultra/profile",
@@ -40,11 +41,14 @@
       "https://mcl.blackboard.com/ultra/calendar",
       "https://mcl.blackboard.com/ultra/messages",
       "https://mcl.blackboard.com/ultra/grades",
-      "https://mcl.blackboard.com/ultra/tools"],
-      "exclude_matches": ["<all_urls>"],
+      "https://mcl.blackboard.com/ultra/tools",
+      "*://www.google.com/"],
       "js": ["popup.js"]
+      
     }
 
   
-  ]
+  ],
+
+  "web_accessible_resources": ["bbl_dark_mode.css"]
 }

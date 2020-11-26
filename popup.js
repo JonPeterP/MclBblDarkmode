@@ -116,7 +116,7 @@ function hello() {
         if(switchStatus){
             // use `url` here inside the callback because it's asynchronous!
             for(i = 0; i < urls.length; i++){
-                if(currentUrl == urls[i]){
+               // if(currentUrl == urls[i]){
                     //chrome.tabs.insertCSS(null, { file: "bbl_dark_mode.css" });
                     //alert('turning to dark mode');
                     
@@ -124,7 +124,7 @@ function hello() {
                     addCss('bbl_dark_mode.css');
                     
                     break;
-               }
+             //  }
             }
 
            
@@ -146,7 +146,7 @@ function hello() {
  function addCss(fileName) {  
 
     var head = document.head;
-    var link = document.createElement("div");
+    var link = document.createElement("link");
   
     link.id = fileName;
     link.type = "text/css";
@@ -154,21 +154,10 @@ function hello() {
     link.href = chrome.extension.getURL(fileName);
   
     //alert(link);
-    head.appendChild(link);
-    alert(document.head);
+    //head.appendChild(link);
+    document.getElementsByTagName("html")[0].appendChild(link);
+    //alert(document.getElementsByTagName("html")[0]);
   }
-
-
-
-  function loadCSS(file) {
-    var link = document.createElement("link");
-    link.href = chrome.extension.getURL(file + '.css');
-    link.id = file;
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    document.getElementsByTagName("head")[0].appendChild(link);
-  }
-  
 
 
 
@@ -180,9 +169,15 @@ function checkCheckbox() {
 }
 
 
+addCss("bbl_dark_mode.css");
 
-document.getElementById('darkSwitch').addEventListener('click', hello);
-document.getElementById('hello').addEventListener('click', hello);
+var switchh = document.getElementById('darkSwitch');
+if(switchh){
+  switchh.addEventListener('click', hello);
+}
+
+//document.getElementById('darkSwitch').addEventListener('click', hello);
+//document.getElementById('hello').addEventListener('click', hello);
   
 
 
