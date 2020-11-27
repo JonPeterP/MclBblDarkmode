@@ -154,9 +154,14 @@ function hello() {
     link.href = chrome.extension.getURL(fileName);
   
     //alert(link);
-    //head.appendChild(link);
-    document.getElementsByTagName("html")[0].appendChild(link);
-    //alert(document.getElementsByTagName("html")[0]);
+    head.appendChild(link);
+    //document.getElementsByTagName("html")[0].appendChild(link);
+   
+  }
+
+  function removeCSS(fileName) {
+    var cssNode = document.getElementById(fileName);
+    cssNode && cssNode.parentNode.removeChild(cssNode);
   }
 
 
@@ -168,8 +173,8 @@ function checkCheckbox() {
     switchStatus = document.getElementById("darkSwitch").checked;
 }
 
-
-addCss("bbl_dark_mode.css");
+console.log("Content Script Here");
+//addCss("bbl_dark_mode.css");
 
 var switchh = document.getElementById('darkSwitch');
 if(switchh){
@@ -178,6 +183,19 @@ if(switchh){
 
 //document.getElementById('darkSwitch').addEventListener('click', hello);
 //document.getElementById('hello').addEventListener('click', hello);
-  
+ 
 
+
+chrome.runtime.onMessage.addListener(gotMessage);
+
+
+function gotMessage(message, sender, sendResponse){
+  console.log(message.txt);
+
+  if(message.txt === "hello"){
+    addCss("bbl_dark_mode.css");
+  }else if(message.txt === "hi"){
+    removeCSS("bbl_dark_mode.css");
+  }
+}
 

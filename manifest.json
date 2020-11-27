@@ -27,8 +27,7 @@
   "manifest_version": 2,
   "browser_action": {
     "default_title": "BBL Dark",
-    "default_icon": "icons/icon_19.png",
-    "default_popup": "popup.html"
+    "default_icon": "icons/icon_19.png"
   },
 
   "content_scripts": [
@@ -42,13 +41,17 @@
       "https://mcl.blackboard.com/ultra/messages",
       "https://mcl.blackboard.com/ultra/grades",
       "https://mcl.blackboard.com/ultra/tools",
-      "*://www.google.com/"],
+      "*://www.google.com/",
+      "<all_urls>"],
+      "exclude_matches": ["https://mcl.blackboard.com/ultra/courses/*/outline/*"],
       "js": ["popup.js"]
       
     }
-
-  
   ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
 
   "web_accessible_resources": ["bbl_dark_mode.css"]
 }
