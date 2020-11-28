@@ -8,13 +8,13 @@ function setup(){
 
 
 
-let state = false;
+var state;
 
 //chrome.browserAction.onClicked.addListener(buttonClicked);
 
 //document.getElementById('darkSwitch').onclick = buttonClicked;
 
-function buttonClicked(switchValue){
+function buttonClicked(){
 
   let param = {
     active: true,
@@ -22,6 +22,9 @@ function buttonClicked(switchValue){
   }
   chrome.tabs.query(param, gotTabs);
   saveOptions();
+  state = document.getElementById('darkSwitch').checked;
+  console.log(document.getElementById('darkSwitch').checked);
+
     function gotTabs(tab){
       let msg = {
         txt: "on"
@@ -34,30 +37,31 @@ function buttonClicked(switchValue){
 
       if (state) {
       
-        chrome.tabs.sendMessage(tab[0].id, normal);
-        state = !state;
-        //saveOptions();
+        chrome.tabs.sendMessage(tab[0].id, msg);
+       // state = document.getElementById('darkSwitch').checked;
+    
         return;
       }else{
   
-        chrome.tabs.sendMessage(tab[0].id, msg);
-        state = !state;
+        chrome.tabs.sendMessage(tab[0].id, normal);
+     //   state = document.getElementById('darkSwitch').checked;
        
       }
      
 
       //console.log()
 
-   
   }
 }
 
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  restoreOptions();
   
- 
-  //loadIfDarkmode();
+  restoreOptions();
+
+  checkState();
   document.getElementById("darkSwitch").addEventListener('click', buttonClicked);
   
  
@@ -71,6 +75,7 @@ function restoreOptions() {
       switchValue: true
   }, function (items) {
       state = items.switchValue;
+      console.log("Restored state: " + state);
       document.getElementById('darkSwitch').checked = items.switchValue;
       //console.log("Item Value: " + items.switchValue);
   });
@@ -82,6 +87,43 @@ function saveOptions(){
     chrome.storage.sync.set({
         switchValue: darkMode
     });
+}
+
+
+function checkState(){
+  let param = {
+    active: true,
+    currentWindow: true
+  }
+  chrome.tabs.query(param, gotTabs);
+ // saveOptions();
+ console.log("State is: " + state);
+
+ state = document.getElementById('darkSwitch').checked;
+    function gotTabs(tab){
+      let msg = {
+        txt: "on"
+      }
+
+      let normal = {
+        txt: "off"
+      }
+   
+
+      if (state) {
+      
+        chrome.tabs.sendMessage(tab[0].id, msg);
+   
+      
+        return;
+      }else{
+        chrome.tabs.sendMessage(tab[0].id, normal);
+        //state = document.getElementById('darkSwitch').checked;
+       
+      }
+
+     
+}
 }
 
 
