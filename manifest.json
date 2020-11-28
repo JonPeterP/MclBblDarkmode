@@ -12,6 +12,7 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "https://mcl.blackboard.com/ultra/institution-page",
     "https://mcl.blackboard.com/ultra/profile",
     "https://mcl.blackboard.com/ultra/stream",
@@ -27,7 +28,8 @@
   "manifest_version": 2,
   "browser_action": {
     "default_title": "BBL Dark",
-    "default_icon": "icons/icon_19.png"
+    "default_icon": "icons/icon_19.png",
+    "default_popup": "popup.html"
   },
 
   "content_scripts": [
@@ -44,7 +46,7 @@
       "*://www.google.com/",
       "<all_urls>"],
       "exclude_matches": ["https://mcl.blackboard.com/ultra/courses/*/outline/*"],
-      "js": ["popup.js"]
+      "js": ["content.js"]
       
     }
   ],
@@ -52,6 +54,8 @@
   "background": {
     "scripts": ["background.js"]
   },
+  
 
+  
   "web_accessible_resources": ["bbl_dark_mode.css"]
 }
