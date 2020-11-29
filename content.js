@@ -196,6 +196,8 @@ function gotMessage(message, sender, sendResponse){
     addCss("bbl_dark_mode.css");
   }else if(message.txt === "off"){
     removeCSS("bbl_dark_mode.css");
+  }else{
+    console.log("IDK WHAT THE PROBLEM IS");
   }
 }
 

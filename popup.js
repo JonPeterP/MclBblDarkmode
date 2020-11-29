@@ -1,18 +1,16 @@
+/*
 function setup(){
   noCanvas();
   //let userput = select
 
 }
 
+*/
 
 
 
 
 var state;
-
-//chrome.browserAction.onClicked.addListener(buttonClicked);
-
-//document.getElementById('darkSwitch').onclick = buttonClicked;
 
 function buttonClicked(){
 
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   restoreOptions();
 
-  checkState();
+  //checkState();
   document.getElementById("darkSwitch").addEventListener('click', buttonClicked);
   
  
@@ -75,6 +73,7 @@ function restoreOptions() {
       state =  document.getElementById('darkSwitch').checked;
       console.log("Restored state: " + state);
       //console.log("Item Value: " + items.switchValue);
+    //  checkState(state);
   });
 }
 
@@ -87,7 +86,7 @@ function saveOptions(){
 }
 
 
-function checkState(){
+function checkState(state){
   let param = {
     active: true,
     currentWindow: true
