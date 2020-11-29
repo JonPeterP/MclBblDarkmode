@@ -41,11 +41,8 @@ function buttonClicked(){
        // state = document.getElementById('darkSwitch').checked;
     
         return;
-      }else{
-  
+      }else if (!state){
         chrome.tabs.sendMessage(tab[0].id, normal);
-     //   state = document.getElementById('darkSwitch').checked;
-       
       }
      
 
@@ -72,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
 function restoreOptions() {
   // Use default value = false.
   chrome.storage.sync.get({
-      switchValue: true
+      switchValue: false
   }, function (items) {
-      state = items.switchValue;
-      console.log("Restored state: " + state);
       document.getElementById('darkSwitch').checked = items.switchValue;
+      state =  document.getElementById('darkSwitch').checked;
+      console.log("Restored state: " + state);
       //console.log("Item Value: " + items.switchValue);
   });
 }
@@ -95,35 +92,28 @@ function checkState(){
     active: true,
     currentWindow: true
   }
-  chrome.tabs.query(param, gotTabs);
- // saveOptions();
- console.log("State is: " + state);
+    chrome.tabs.query(param, gotTabs);
+  // saveOptions();
 
- state = document.getElementById('darkSwitch').checked;
-    function gotTabs(tab){
-      let msg = {
-        txt: "on"
-      }
+  //state = document.getElementById('darkSwitch').checked;
+  console.log("State is: " + state);
+      function gotTabs(tab){
+        let msg = {
+          txt: "on"
+        }
 
-      let normal = {
-        txt: "off"
-      }
-   
-
-      if (state) {
-      
-        chrome.tabs.sendMessage(tab[0].id, msg);
-   
-      
-        return;
-      }else{
-        chrome.tabs.sendMessage(tab[0].id, normal);
-        //state = document.getElementById('darkSwitch').checked;
-       
-      }
-
-     
-}
+        let normal = {
+          txt: "off"
+        }
+  
+        if (state) {
+          chrome.tabs.sendMessage(tab[0].id, msg);
+          return;
+        }else if (!state){
+          chrome.tabs.sendMessage(tab[0].id, normal);
+          //state = document.getElementById('darkSwitch').checked
+        }
+    }
 }
 
 

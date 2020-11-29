@@ -82,7 +82,7 @@ browser.runtime.onMessage.addListener(message => {
 */
 
 var switchStatus;
-
+var state; 
 var cssFile = "bbl_dark_mode";
 
 const urls = ["https://mcl.blackboard.com/ultra/institution-page",
@@ -199,5 +199,38 @@ function gotMessage(message, sender, sendResponse){
   }
 }
 
+restoreOptions();
+//checkState();
+
+
+
+function restoreOptions() {
+  // Use default value = false.
+  chrome.storage.sync.get({
+      switchValue: false
+  }, function (items) {
+      //document.getElementById('darkSwitch').checked = items.switchValue;
+      //state =  items.switchValue;
+      console.log("Content Restored state: " + items.switchValue);
+      //console.log("Item Value: " + items.switchValue);
+
+      if(items.switchValue){
+        console.log("ADDING CSS NOW");
+        addCss("bbl_dark_mode.css");
+      }else if(!items.switchValue){
+        removeCSS("bbl_dark_mode.css");
+        console.log("removing CSS");
+      }else{
+        console.log("IDK WHAT THE PROBLEM IS");
+      }
+  });
+}
+
+function checkState(){
+  //restoreOptions();
+  console.log("Check state: " + state);
+
+ 
+}
 
 
