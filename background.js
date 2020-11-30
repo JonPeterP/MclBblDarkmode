@@ -68,12 +68,43 @@ function buttonClicked(tab){
 */
 
 
+chrome.tabs.onActivated.addListener( function(activeInfo){
+  chrome.tabs.get(activeInfo.tabId, function(tab){
+      currenttTab = tab.url;
+     // console.log("you are here on activated: "+y);
+
+      
+  let param = {
+    active: true,
+    currentWindow: true
+  }
+      chrome.tabs.query(param, gotTabs);
+      function gotTabs(tab){
+      chrome.tabs.sendMessage(tab[0].id, currenttTab);
+      }
+  });
+});
+
+chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
+  if (tab.active && change.url) {
+     // console.log("you are here on Updated: "+change.url);      
+      
+      
+  let param = {
+    active: true,
+    currentWindow: true
+  }
+    chrome.tabs.query(param, gotTabs);
+      function gotTabs(tab){
+      chrome.tabs.sendMessage(tab[0].id, change.url);
+    }
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
   //restoreOptions();
   //loadIfDarkmode();
-
- 
   console.log("BACKGROUND DOM Loaded");
 });
 
