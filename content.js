@@ -1,7 +1,3 @@
-var switchStatus;
-var state; 
-var cssFile = "bbl_dark_mode";
-
 const urls = ["https://mcl.blackboard.com/ultra/institution-page",
 "https://mcl.blackboard.com/ultra/profile",
 "https://mcl.blackboard.com/ultra/stream",
@@ -92,6 +88,8 @@ function updateOnTabFocus(link){
           addCss('bbl_dark_mode.css');
       }else if(urls.includes(link) && !item.switchValue && document.getElementById("bbl_dark_mode.css")){
           removeCSS('bbl_dark_mode.css');
+      }else if(!urls.includes(link) && item.switchValue && document.getElementById("bbl_dark_mode.css")){
+        removeCSS('bbl_dark_mode.css');
       }
     });
 }

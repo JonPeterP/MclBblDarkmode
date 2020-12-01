@@ -67,11 +67,26 @@ function buttonClicked(tab){
 }
 */
 
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+  //console.log("Is doing this now");
+
+ 
+  if(chrome.runtime.lastError){
+    console.log("Error on: " + chrome.runtime.lastError);
+  }else{
+   
+    //console.log("no chrome runtime error");
+    chrome.tabs.executeScript(null,{file:"content.js"}, _=> chrome.runtime.lastError);
+  }
+
+
+
+});
 
 chrome.tabs.onActivated.addListener( function(activeInfo){
   chrome.tabs.get(activeInfo.tabId, function(tab){
       currenttTab = tab.url;
-     // console.log("you are here on activated: "+y);
+      console.log("you are here on activated: "+ currenttTab);
 
       
   let param = {
@@ -87,7 +102,7 @@ chrome.tabs.onActivated.addListener( function(activeInfo){
 
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
   if (tab.active && change.url) {
-     // console.log("you are here on Updated: "+change.url);      
+     //console.log("you are here on Updated: "+change.url);      
       
       
   let param = {

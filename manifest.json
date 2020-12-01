@@ -12,7 +12,9 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "storage"
+    "storage",
+    "webNavigation",
+    "*://mcl.blackboard.com/ultra/*"
   ],
 
   "manifest_version": 2,
@@ -32,7 +34,8 @@
       "https://mcl.blackboard.com/ultra/calendar",
       "https://mcl.blackboard.com/ultra/messages",
       "https://mcl.blackboard.com/ultra/grades",
-      "https://mcl.blackboard.com/ultra/tools"
+      "https://mcl.blackboard.com/ultra/tools",
+      "https://mcl.blackboard.com/"
       ],
       "exclude_matches": ["https://mcl.blackboard.com/ultra/courses/*/outline/*"],
       "js": ["content.js"]
