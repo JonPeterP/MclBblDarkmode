@@ -1,12 +1,5 @@
-const urls = ["https://mcl.blackboard.com/ultra/institution-page",
-"https://mcl.blackboard.com/ultra/profile",
-"https://mcl.blackboard.com/ultra/stream",
-"https://mcl.blackboard.com/ultra/course",
-"https://mcl.blackboard.com/ultra/organization",
-"https://mcl.blackboard.com/ultra/calendar",
-"https://mcl.blackboard.com/ultra/messages",
-"https://mcl.blackboard.com/ultra/grades",
-"https://mcl.blackboard.com/ultra/tools"];
+
+
 
 
  function addCss(fileName) {  
@@ -46,10 +39,13 @@ function gotMessage(message, sender, sendResponse){
   }else if(message.indexOf('http') > -1){
     console.log("Message is a link");
     updateOnTabFocus(message);
-  }else{
+  }else if (msg.text === 'are_you_there_content_script?') {
+    sendResponse({status: "yes"});
+  }else {
     console.log("IDK WHAT THE PROBLEM IS");
   }
 }
+
 
 restoreOptions();
 //checkState();
@@ -79,7 +75,17 @@ function restoreOptions() {
 }
 
 function updateOnTabFocus(link){
+  var urls = ["https://mcl.blackboard.com/ultra/institution-page",
+  "https://mcl.blackboard.com/ultra/profile",
+  "https://mcl.blackboard.com/ultra/stream",
+  "https://mcl.blackboard.com/ultra/course",
+  "https://mcl.blackboard.com/ultra/organization",
+  "https://mcl.blackboard.com/ultra/calendar",
+  "https://mcl.blackboard.com/ultra/messages",
+  "https://mcl.blackboard.com/ultra/grades",
+  "https://mcl.blackboard.com/ultra/tools"];
 
+  
   chrome.storage.sync.get({
     switchValue: false
   }, function(item){
