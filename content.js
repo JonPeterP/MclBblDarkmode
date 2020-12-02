@@ -25,12 +25,12 @@
 
 
 
-console.log("Content Script Here");
+//console.log("Content Script Here");
  
 
 chrome.runtime.onMessage.addListener(gotMessage);
 function gotMessage(message, sender, sendResponse){
-  console.log(message);
+  //console.log(message);
 
   if (message.greeting === "hello"){
     sendResponse({message: "hi"});
@@ -43,7 +43,7 @@ function gotMessage(message, sender, sendResponse){
     removeCSS("bbl_dark_mode.css");
 
   }else if(message.indexOf('http') > -1){
-    console.log("Message is a link");
+   // console.log("Message is a link");
     updateOnTabFocus(message);
   }else{
     console.log("IDK WHAT THE PROBLEM IS");
@@ -66,15 +66,15 @@ function restoreOptions() {
   }, function (items) {
       //document.getElementById('darkSwitch').checked = items.switchValue;
       //state =  items.switchValue;
-      console.log("Content Restored state: " + items.switchValue);
+      //console.log("Content Restored state: " + items.switchValue);
       //console.log("Item Value: " + items.switchValue);
 
       if(items.switchValue){
-        console.log("ADDING CSS NOW");
+        //console.log("ADDING CSS NOW");
         addCss("bbl_dark_mode.css");
       }else if(!items.switchValue){
         removeCSS("bbl_dark_mode.css");
-        console.log("removing CSS");
+        //console.log("removing CSS");
       }else{
        // console.log("IDK WHAT THE PROBLEM IS");
       }

@@ -9,7 +9,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 chrome.tabs.onActivated.addListener( function(activeInfo){
   chrome.tabs.get(activeInfo.tabId, function(tab){
       currenttTab = tab.url;
-      console.log("you are here on activated: "+ currenttTab);
+ //     console.log("you are here on activated: "+ currenttTab);
       
   let param = {
     active: true,
@@ -46,11 +46,11 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
           if(chrome.runtime.lastError) {
           }
           if (response) {
-              console.log("Already there");
+           //   console.log("Already there");
           }
           else {
             chrome.tabs.executeScript(tabId.id, { file: "content.js" }, _=> chrome.runtime.lastError);
-              console.log("Not there, inject contentscript");
+           //   console.log("Not there, inject contentscript");
           }
       });
   });
@@ -58,7 +58,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
   
 
   if (tab.active && change.url) {
-     console.log("you are here on Updated: "+change.url);      
+    // console.log("you are here on Updated: "+change.url);      
   let param = {
     active: true,
     currentWindow: true
