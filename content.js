@@ -32,18 +32,25 @@ chrome.runtime.onMessage.addListener(gotMessage);
 function gotMessage(message, sender, sendResponse){
   console.log(message);
 
-  if(message.txt === "on"){
+  if (message.greeting === "hello"){
+    sendResponse({message: "hi"});
+  }
+  
+  else if(message.txt === "on"){
     addCss("bbl_dark_mode.css");
+
   }else if(message.txt === "off"){
     removeCSS("bbl_dark_mode.css");
+
   }else if(message.indexOf('http') > -1){
     console.log("Message is a link");
     updateOnTabFocus(message);
-  }else if (msg.text === 'are_you_there_content_script?') {
-    sendResponse({status: "yes"});
-  }else {
+  }else{
     console.log("IDK WHAT THE PROBLEM IS");
   }
+
+  
+
 }
 
 
