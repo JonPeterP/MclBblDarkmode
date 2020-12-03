@@ -50,7 +50,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
           }
           else {
             chrome.tabs.executeScript(tabId.id, { file: "content.js" }, _=> chrome.runtime.lastError);
-           //   console.log("Not there, inject contentscript");
+            console.log("Not there, inject contentscript");
           }
       });
   });
@@ -58,7 +58,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
   
 
   if (tab.active && change.url) {
-    // console.log("you are here on Updated: "+change.url);      
+    console.log("you are here on Updated: "+change.url);      
   let param = {
     active: true,
     currentWindow: true
@@ -71,6 +71,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
 });
 
 
+/*
 document.addEventListener('DOMContentLoaded', function () {
   //restoreOptions();
   //loadIfDarkmode();
@@ -91,7 +92,7 @@ function restoreOptions() {
       //console.log("Item Value: " + items.switchValue);
   });
 }
-
+*/
 
 /*
 // listen for requests

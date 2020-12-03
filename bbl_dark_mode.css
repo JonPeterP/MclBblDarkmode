@@ -1,6 +1,6 @@
 :root{
   --background: #121212;
-  --accent: #424242;
+  --accent: #222222;
   --maintext: #ffffff;
   --subtext: #f5f5f5;
 }
@@ -24,20 +24,20 @@ div.flex-page-content {
   }
   
   aside.hide-in-background.themed-background-primary-fill-only.left-off-canvas-menu.color-selection-live-mode {
-    background-color: #000000;
+    background-color: var(--background);
   }
   
   div.course-org-list {
-    background-color: #13162D;
+    background-color: var(--background);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-1 {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.ql-editor.bb-editor {
     color: #FFFFFF;
-    background-color: #0F0F29;
+    background-color: var(--accent);
   }
   
   div h6 {
@@ -45,28 +45,28 @@ div.flex-page-content {
   }
   
   span.branding.themed-logo-background-primary-fill {
-    background-color: #000000;
+    background-color: var(--background);
     
   }
   
   div.row.collapse {
-    background-color: #13162D;
+    background-color: var(--background);
     color: #FFFFFF;
   }
   
   #body-content {
-    background-color: #13162D;
+    background-color: var(--background);
     
   }
   
   div section h2 {
-    background-color: #13162D;
+    background-color: var(--background);
     color: #FFFFFF;
     
   }
   
   li.data-row {
-    background-color: #13162D !important;
+    background-color: var(--accent) !important;
     color: #FFFFFF !important;
   }
   
@@ -85,7 +85,7 @@ div.flex-page-content {
   }
   
   header.base-header.themed-background-primary-medium-down.color-selection-live-mode {
-    background-color: #13162D;
+    background-color: var(--background);
   }
   
   h1.page-title.a.themed-background-primary-medium-down.has-filter.js-base-page-skip-link-target {
@@ -105,28 +105,28 @@ div.flex-page-content {
   }
   
   a.button.button--secondary.action-button {
-    color: #000000;
+    color: var(--accent);
   }
   
   div.term-navigator {
-    background-color:  #13162D !important;
+    background-color: var(--background) !important;
     
   }
   
   div.course-list.current-term {
-    background-color: #13162D;
+    background-color: var(--background);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-4 {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-classic {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div h3 {
-    background-color: #13162D;
+    background-color: var(--background);
     color: #FFFFFF;
   }
   
@@ -143,7 +143,7 @@ div.flex-page-content {
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-2 {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   
@@ -159,122 +159,122 @@ div.flex-page-content {
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-6 {
-    background-color:  #13162D;
+    background-color: var(--accent);
     
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-8 {
-    background-color:  #13162D;
+    background-color: var(--accent);
   }
   
   div.base-courses {
-    background-color:  #13162D;
+    background-color: var(--background);
   }
   
   
   div.hide-in-background {
-    background-color:  #13162D;
+    background-color: var(--background);
   }
   
   
   #page-size-selector-describe{
-    color: #000000;
+    color: var(--accent);
   }
   
   div.select-wrapper {
-    color: #000000 !important;
-    background-color: #13162D !important;
+    color: var(--accent) !important;
+    background-color: var(--background) !important;
     
   }
   
   
   input.ng-pristine.ng-untouched.ng-valid.ng-empty {
-    background-color: #000000;
+    background-color: var(--accent);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.inactive-link.child-is-invokable.course-color-3 {
-    background-color:  #13162D;
+    background-color: var(--accent);
     
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-9 {
-    background-color:  #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.inactive-link.child-is-invokable.course-color-3 {
-    background-color:  #13162D;
+    background-color: var(--accent);
     
   }
   
-    div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-9 {   background-color:  #13162D; 
+    div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-9 {   background-color: var(--accent); 
   }
   
-  div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-9 {   background-color:  #13162D;
+  div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-9 {   background-color: var(--accent);
   }
   
   td.fc-day-number.fc-sun.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-mon.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-tue.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-wed.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-thu.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-fri.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-sat.fc-past {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-sat.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-sun.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-mon.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-tue.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-wed.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-thu.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-fri.fc-future {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   td.fc-day-number.fc-fri.fc-today.fc-state-highlight {
-    background-color: #13162D;
-    color: #13162D;
+    background-color: var(--accent);
+    color: var(--accent);
   }
   
   td.fc-day.fc-widget-content.fc-fri.fc-today.fc-state-highlight {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   tr td span {
@@ -290,21 +290,19 @@ div.flex-page-content {
   }
   
   div.messages-header.js-course-skip-link-target.flex-container {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.summary {
-    color:  #000000;
-    background-color:   #13162D;
+    color:  var(--accent);
+    background-color:   var(--accent);
   }
   
   div.element-card.tile.course-color-1.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
-  svg.MuiSvgIcon-root.jss320.MuiSvgIcon-colorPrimary.MuiSvgIcon-fontSizeLarge {
-    color: #FFFFFF;
-  }
+
   
   h4.section-title {
     color: #FFFFFF;
@@ -314,49 +312,44 @@ div.flex-page-content {
     color: #000000 !important;
   }
   
-  bb-ui-icon-discussion svg path {
-    color: #FFFFFF !important;
-    
-  }
+
   
-  svg.MuiSvgIcon-root.jss378.MuiSvgIcon-colorPrimary.MuiSvgIcon-fontSizeLarge {
-    color: #FFFFFF;
-  }
+ 
   
   div.element-card.tile.course-color-8.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.base-grades-empty-state.text-center {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   p.main {
-    background-color: #13162D !important;
+    background-color: var(--accent) !important;
   }
   
   div.columns.small-12.base-grades-empty-element {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.tile.course-color-4.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.tile.course-color-classic.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.tile.course-color-2.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.tile.course-color-9.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.element-card.tile.course-color-6.base-grades-course-tile.active-course {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   element.style.tabular-row.child-is-invokable:hover{
@@ -364,20 +357,20 @@ div.flex-page-content {
   }
   
   div.element-details {
-    background-color: #13162D;
+    background-color: var(--accent);
     
   }
   
   a.element-card.tile.course-color-3.js-course-details.available.student {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   a.link-list-component__link.-black {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.stream-item.angular-animate {
-    background-color: #13162D !important;
+    background-color: var(--background) !important;
   }
   
   div.filter-wrapper {
@@ -389,30 +382,22 @@ div.flex-page-content {
     color: #000000;
   }
   
-  
-  
-  bb-ui-icon-test svg path {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-calculation svg path {
-    color: #FFFFFF !important;
-  }
+ 
   
   header.panel-header.simple-header.course-header.color-selection-live-mode {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   span.js-course-name.ellipsis {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   aside.outline-details.course-color-1 {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.outline-header {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   h2.js-course-skip-link-target.content-header {
@@ -423,13 +408,6 @@ div.flex-page-content {
     color: #FFFFFF;
   }
   
-  bb-ui-icon-presentation svg path {
-    color: #FFFFFF !important;
-  }
-  
-  svg.MuiSvgIcon-root.jss203.MuiSvgIcon-colorPrimary.MuiSvgIcon-fontSizeLarge {
-    color: #FFFFFF;
-  }
   
   bb-datetime.content-due-date {
     color: #FFFFFF;
@@ -440,74 +418,56 @@ div.flex-page-content {
   }
   
   div.panel-header.persistent-white-header.mode-.panel-header-directive.has-controls {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   h1.panel-title.secondary-title.student {
-    background-color: #13162D;
+    background-color: var(--accent);
     color: #FFFFFF;
   }
   
   div.panel {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.reply-control {
-    background-color: #020821;
+    background-color: var(--accent);
   }
   
   span.progress-status {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.notification-container {
-    background-color: #13162D !important;
+    background-color: var(--accent) !important;
   }
   
   div.entry.comment-entry {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div h1 span {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
-  
-  bb-ui-icon-presentation svg rect {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-presentation svg circle {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-link svg path {
-    color: #FFFFFF !important;
-  }
-  
+
   base-content-item.child-is-invokable:hover{
-  Background-color: #13162D
+  Background-color: var(--accent);
   }
   
-  bb-ui-icon-folder svg path {
-    color: #FFFFFF !important;
-    
-  }
+
   
   aside.outline-details.course-color-4 {
     
-    background-color:  #13162D
+    background-color:  var(--accent);
   }
   
   bb-svg-icon svg use {
     color: #FFFFFF;
   }
   
-  bb-ui-icon-discussion svg circle {
-    color: #FFFFFF !important;
-  }
-  
+ 
   div.row.drag-element-row {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   p.js-description {
@@ -515,11 +475,11 @@ div.flex-page-content {
   }
   
   div.row.tabular-row.js-row.child-is-invokable {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   aside.student-grade-overview.course-color-4 {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   div.overall-grade-running-total-wrapper__overall-label {
@@ -535,7 +495,7 @@ div.flex-page-content {
   }
   
   div.messages-container.color-override.no-border {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   div.large-4.medium-6.columns.column-title.tabular-list-header-offset.name {
@@ -546,10 +506,7 @@ div.flex-page-content {
     color: #FFFFFF;
   }
   
-  bb-ui-icon-document-reports svg path {
-    color: #FFFFFF;
-  }
-  
+
   div.large-4.columns.column-title.hide-for-medium {
     color: #FFFFFF;
   }
@@ -567,67 +524,67 @@ div.flex-page-content {
   }
   
   button.bb-editor-toolbar-button.bb-editor-toolbar-button--separator.bb-editor-toolbar-text.bb-editor-toolbar-dropdown.text-style-normal {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.bold-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.italicize-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.underline-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.superscript-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.subscript-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.strikethrough-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.numbered_list-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.bulleted_list-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.insert_formula-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.link-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.attachment-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.image-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.video-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   span.icon.add-normal-icon {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   div.bb-editor-toolbar.no-select {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   button.bb-editor-toolbar-button.bb-editor-toolbar-button--separator.bb-editor-toolbar-dropdown.insert-content-normal {
@@ -636,7 +593,7 @@ div.flex-page-content {
   
   
   aside.student-grade-overview.course-color-1 {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
   div.columns.small-8.medium-4.tabular-list-header-offset.text-left {
@@ -646,7 +603,7 @@ div.flex-page-content {
   
   
   h2.semester.active-term {
-    background-color:  #13162D !important;
+    background-color: var(--background) !important;
     
   }
   
@@ -660,48 +617,29 @@ div.flex-page-content {
   }
   
   
-  
-  bb-ui-icon-lti svg path {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-assignment svg path {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-scormengine svg path {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-pdf svg path {
-    color: #FFFFFF !important;
-  }
-  
-  bb-ui-icon-document-text svg path {
-    color: #FFFFFF !important;
-  }
+ 
   
   aside.student-grade-overview.course-color-2 {
-    background-color:  #13162D;
+    background-color:  var(--accent);
   }
   
 
   
   aside.column.medium-12.large-3.outline-actions {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.course-outline-row.row {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   div.panel-content {
-    background-color: #13162D;
+    background-color: var(--accent);
   }
   
   
   div.folder-contents {
-    background-color: #13162D;
+    background-color: var(--accent);
     
   }
 
@@ -721,5 +659,28 @@ div.multi-column-course-id {
     color: #DADADA;
   }
 
-  
-  
+  .makeStylesbodyContainer-0-2-9 {
+    background-color: var(--background) !important;
+}
+
+.MuiPaperroot-0-2-207 {
+  background-color: var(--accent) !important;
+
+}
+
+.MuiButtoncontainedPrimary-0-3-10{
+  background-color: var(--background);
+}
+
+h3.title.ellipsis
+{
+  background-color: var(--accent) !important;
+}
+
+a.bb-click-target{
+  background-color: var(--accent) !important;
+}
+
+.element-card.tile, .element-card.bar {
+  background-color: var(--accent);
+}
