@@ -684,3 +684,19 @@ a.bb-click-target{
 .element-card.tile, .element-card.bar {
   background-color: var(--accent);
 }
+
+div button span{
+  color: var(--maintext);
+}
+
+bb-ui-icon-link svg path{
+  color: var(--maintext);
+}
+
+bb-ui-icon-document-blank svg path{
+  color: var(--maintext);
+}
+
+bb-ui-icon-assignment svg path{
+  color: var(--maintext);
+}
