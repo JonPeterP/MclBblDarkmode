@@ -5,9 +5,9 @@
   "version": "1.0", 
 
   "icons": {
-    "16": "icons/icon_19.png",
-    "48": "icons/icon_19.png",
-    "128": "icons/icon_128.png"
+    "16": "icons/bblicon_16.png",
+    "48": "icons/bblicon_48.png",
+    "128": "icons/bblicon_128.png"
   },
   "permissions": [
     "activeTab",
@@ -20,7 +20,7 @@
   "manifest_version": 2,
   "browser_action": {
     "default_title": "BBL Dark",
-    "default_icon": "icons/icon_19.png",
+    "default_icon": "icons/bblicon_16.png",
     "default_popup": "popup.html"
   },
 

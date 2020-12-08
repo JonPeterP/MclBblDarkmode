@@ -42,23 +42,28 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
     //console.log("EXECUTING CHECK");
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-          if(chrome.runtime.lastError) {
-          }
-          if (response) {
-           //   console.log("Already there");
-          }
-          else {
-            chrome.tabs.executeScript(tabId.id, { file: "content.js" }, _=> chrome.runtime.lastError);
-            console.log("Not there, inject contentscript");
-          }
-      });
+
+      try{
+        chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+        if(chrome.runtime.lastError) {
+        }
+        if (response) {
+         //   console.log("Already there");
+        }
+        else {
+          chrome.tabs.executeScript(tabId.id, { file: "content.js" }, _=> chrome.runtime.lastError);
+         // console.log("Not there, inject contentscript");
+        }
+      });}catch(e){
+      console.log("Error on: " + e);
+    }
+      
   });
 
   
 
   if (tab.active && change.url) {
-    console.log("you are here on Updated: "+change.url);      
+ //   console.log("you are here on Updated: "+change.url);      
   let param = {
     active: true,
     currentWindow: true

@@ -6,21 +6,22 @@
 }
 
 
+
 div.flex-page-content {
     background-color: var(--background);
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   h3.subheader.module-wrapper__title {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div div p strong {
-    color: #FFFFFF !important;
+    color: var(--maintext) !important;
   }
   
   div div p {
-    color: #FFFFFF !important;
+    color: var(--subtext) !important;
   }
   
   aside.hide-in-background.themed-background-primary-fill-only.left-off-canvas-menu.color-selection-live-mode {
@@ -36,12 +37,12 @@ div.flex-page-content {
   }
   
   div.ql-editor.bb-editor {
-    color: #FFFFFF;
+    color: var(--maintext);
     background-color: var(--accent);
   }
   
   div h6 {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   span.branding.themed-logo-background-primary-fill {
@@ -51,7 +52,7 @@ div.flex-page-content {
   
   div.row.collapse {
     background-color: var(--background);
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   #body-content {
@@ -61,13 +62,13 @@ div.flex-page-content {
   
   div section h2 {
     background-color: var(--background);
-    color: #FFFFFF;
+    color: var(--maintext);
     
   }
   
   li.data-row {
     background-color: var(--accent) !important;
-    color: #FFFFFF !important;
+    color: var(--maintext) !important;
   }
   
   span.system-default-language {
@@ -76,11 +77,11 @@ div.flex-page-content {
   }
   
   a span span {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.background {
-    background-color: #FFFFFF;
+    background-color: var(--maintext);
     
   }
   
@@ -89,19 +90,19 @@ div.flex-page-content {
   }
   
   h1.page-title.a.themed-background-primary-medium-down.has-filter.js-base-page-skip-link-target {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div div a {
-    color: #FFFFFF !important;
+    color: var(--maintext) !important;
   }
   
   button.button.button--secondary.round.small {
-    background-color: #FFFFFF;
+    background-color: var(--maintext);
   }
   
   div div span {
-    color: #FFFFFF !important;
+    color: var(--subtext) !important;
   }
   
   a.button.button--secondary.action-button {
@@ -127,19 +128,19 @@ div.flex-page-content {
   
   div h3 {
     background-color: var(--background);
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   #filter-courses-value {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   h4.js-course-title-element.ellipsis {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div bb-username bdi {
-    color: #FFFFFF;
+    color: var(--subtext);
   }
   
   div.element-card.course-element-card.highlight.pointer.bar.js-course-details.child-is-invokable.course-color-2 {
@@ -286,7 +287,7 @@ div.flex-page-content {
   }
   
   h1.page-title.a.themed-background-primary-medium-down.js-base-page-skip-link-target {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.messages-header.js-course-skip-link-target.flex-container {
@@ -305,7 +306,7 @@ div.flex-page-content {
 
   
   h4.section-title {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   span.grade-input-display.grade-ellipsis {
@@ -325,6 +326,7 @@ div.flex-page-content {
   }
   
   p.main {
+    color: var(--subtext) !important;
     background-color: var(--accent) !important;
   }
   
@@ -374,7 +376,7 @@ div.flex-page-content {
   }
   
   div.filter-wrapper {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   tbody tr td {
@@ -401,20 +403,20 @@ div.flex-page-content {
   }
   
   h2.js-course-skip-link-target.content-header {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   h2.js-course-skip-link-target.js-details-header {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   
   bb-datetime.content-due-date {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.due-date {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.panel-header.persistent-white-header.mode-.panel-header-directive.has-controls {
@@ -423,7 +425,7 @@ div.flex-page-content {
   
   h1.panel-title.secondary-title.student {
     background-color: var(--accent);
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.panel {
@@ -462,7 +464,7 @@ div.flex-page-content {
   }
   
   bb-svg-icon svg use {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
  
@@ -483,15 +485,15 @@ div.flex-page-content {
   }
   
   div.overall-grade-running-total-wrapper__overall-label {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.columns.hide-for-small-only.medium-2 {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.columns.medium-4.large-2 {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.messages-container.color-override.no-border {
@@ -499,28 +501,28 @@ div.flex-page-content {
   }
   
   div.large-4.medium-6.columns.column-title.tabular-list-header-offset.name {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.js-report-item-name {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
 
   div.large-4.columns.column-title.hide-for-medium {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div.report-item-description.large-4.hide-for-medium.hide-for-small.columns.js-report-item-description {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   div div bb-datetime {
-    color: #FFFFFF !important;
+    color: var(--maintext) !important;
   }
   
   div.large-4.medium-6.columns.column-title {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   button.bb-editor-toolbar-button.bb-editor-toolbar-button--separator.bb-editor-toolbar-text.bb-editor-toolbar-dropdown.text-style-normal {
@@ -588,7 +590,7 @@ div.flex-page-content {
   }
   
   button.bb-editor-toolbar-button.bb-editor-toolbar-button--separator.bb-editor-toolbar-dropdown.insert-content-normal {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   
@@ -597,7 +599,7 @@ div.flex-page-content {
   }
   
   div.columns.small-8.medium-4.tabular-list-header-offset.text-left {
-    color: #FFFFFF;
+    color: var(--maintext);
     
   }
   
@@ -613,7 +615,7 @@ div.flex-page-content {
   
   
   button.lm-title.secondary-title.ellipse {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   
@@ -652,7 +654,7 @@ div.flex-page-content {
 }
 
 div.multi-column-course-id {
-    color: #FFFFFF;
+    color: var(--maintext);
   }
   
   h4.js-course-title-element {
@@ -686,17 +688,37 @@ a.bb-click-target{
 }
 
 div button span{
-  color: var(--maintext);
+  color: var(--background);
 }
 
 bb-ui-icon-link svg path{
-  color: var(--maintext);
+  color: var(--background);
 }
 
 bb-ui-icon-document-blank svg path{
-  color: var(--maintext);
+  color: var(--background);
 }
 
 bb-ui-icon-assignment svg path{
-  color: var(--maintext);
+  color: var(--background);
+}
+
+ui li button{
+  color: var(--subtext);
+}
+
+a.js-title-link{
+  color: var(--subtext);
+}
+
+div span bdi{
+  color: var(--subtext);
+}
+
+label.toggle-label.input.label-two.js-label-toggle-grid{
+  background-color: var(--background) !important;
+}
+
+img.no.select.broken-image{
+  background-color: #000000;
 }

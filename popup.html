@@ -15,9 +15,9 @@
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         margin: 0;
-        min-height: 180px;
+        min-height: 100px;
         padding: 0;
-        width: 300px;
+        width: 230px;
         background-color: #353535;
       }
 
@@ -26,7 +26,17 @@
         font-size: 20px;
         font-weight: 400;
         margin: 0;
-        color: #2f5876;
+        color: #ffffff;
+        text-align: start; 
+      }
+
+      h3{
+        font-family: "Menlo", monospace;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+        color: #e2e2e2;
+        text-align: start; 
       }
 
       a:link,
@@ -52,7 +62,7 @@
 
       .modal-icons {
         border-top: 0.5px solid #dadada;
-        height: 50px;
+        height: 1px;
         width: 100%;
       }
 
@@ -71,9 +81,11 @@
       }
 
       .flex-container {
+        background-color: #252525;
         display: flex;
-        justify-content: space-between;
-        padding: 10px 22px;
+        justify-content:space-between;
+        padding: 10px 10px;
+        align-items: center;
       }
 
       .flex {
@@ -160,24 +172,23 @@
 <body>
     <div class="modal_header">
         <h1 class = "logo">
-            <img src = "icons/icon_128.png" alt="Pomper logo" class = "logo-icon"> 
+            <a href="https://mcl.blackboard.com/ultra/" target="_blank">
+            <img src = "icons/bblicon_128.png" alt="Pomper logo" class = "logo-icon"> 
             BBL Dark Mode 
+          </a>
         </h1>
     </div>
 
-    <div class="modal-content">
-        <p>Easily swap to BBL dark mode SOME TITLE HERE</p>
-    </div>
+  
     <div class="modal-icons">
         <div class="flex-container">
+
+          <h3>Dark mode: </h3>
                     <!-- Rounded switch -->
             <label class="switch">
                 <input type='checkbox' id = 'darkSwitch' value="false">
                 <span class="slider round"></span>
             </label>
-      
-       
-            <button id="hello">Try it</button>
         </div>
        
     </div>
