@@ -51,8 +51,10 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
          //   console.log("Already there");
         }
         else {
+          if(tab.url.indexOf("mcl.blackboard") != -1){
           chrome.tabs.executeScript(tabId.id, { file: "content.js" }, _=> chrome.runtime.lastError);
          // console.log("Not there, inject contentscript");
+          }
         }
       });}catch(e){
       console.log("Error on: " + e);
