@@ -91,7 +91,8 @@ function updateOnTabFocus(link){
   "https://mcl.blackboard.com/ultra/messages",
   "https://mcl.blackboard.com/ultra/grades",
   "https://mcl.blackboard.com/ultra/tools",
-  "https://mcl.blackboard.com/ultra/integration/bbAssist"];
+  "https://mcl.blackboard.com/ultra/integration/bbAssist",
+  "https://mcl.blackboard.com/ultra/courses/*/outline"];
 
   
   chrome.storage.sync.get({

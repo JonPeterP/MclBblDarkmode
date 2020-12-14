@@ -36,9 +36,10 @@
       "https://mcl.blackboard.com/ultra/grades",
       "https://mcl.blackboard.com/ultra/tools",
       "https://mcl.blackboard.com/", 
-      "https://mcl.blackboard.com/ultra/integration/bbAssist"
+      "https://mcl.blackboard.com/ultra/integration/bbAssist",
+      "https://mcl.blackboard.com/ultra/courses/*/outline"
       ],
-      "exclude_matches": ["https://mcl.blackboard.com/ultra/courses/*/outline/*"],
+      "exclude_matches": ["https://mcl.blackboard.com/ultra/courses/*/cl/outline/*"],
       "js": ["content.js"]
       
     }

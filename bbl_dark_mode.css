@@ -359,7 +359,7 @@ div.flex-page-content {
   }
   
   div.element-details {
-    background-color: var(--accent);
+    background-color: var(--background);
     
   }
   
@@ -387,7 +387,7 @@ div.flex-page-content {
  
   
   header.panel-header.simple-header.course-header.color-selection-live-mode {
-    background-color: var(--accent);
+    background-color: var(--background);
   }
   
   span.js-course-name.ellipsis {
@@ -469,7 +469,7 @@ div.flex-page-content {
   
  
   div.row.drag-element-row {
-    background-color:  var(--accent);
+    background-color:  var(--background);
   }
   
   p.js-description {
@@ -628,11 +628,11 @@ div.flex-page-content {
 
   
   aside.column.medium-12.large-3.outline-actions {
-    background-color: var(--accent);
+    background-color: var(--background);
   }
   
   div.course-outline-row.row {
-    background-color: var(--accent);
+    background-color: var(--background);
   }
   
   div.panel-content {
@@ -795,5 +795,29 @@ span span bdi {
 }
 
 footer.submit-footer.panel-footer.hide-on-full.equal-buttons.buttons-1 {
+  background-color: var(--background);
+}
+
+.panel-wrap{
+  background-color: var(--background);
+}
+
+.course .outline-details .main-instructor{
+  background-color: var(--background);
+}
+
+.course .outline-details{
+  background-color: var(--background);
+}
+
+aside.outline-details.course-color-9{
+  background-color: var(--background);
+}
+
+div div div{
+  border-color: var(--background);
+}
+
+.no-create .folder .folder-contents .empty-message{
   background-color: var(--background);
 }
