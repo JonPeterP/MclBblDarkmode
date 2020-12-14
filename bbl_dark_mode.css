@@ -359,7 +359,7 @@ div.flex-page-content {
   }
   
   div.element-details {
-    background-color: var(--background);
+    background-color: var(--accent);
     
   }
   
@@ -387,7 +387,7 @@ div.flex-page-content {
  
   
   header.panel-header.simple-header.course-header.color-selection-live-mode {
-    background-color: var(--background);
+    background-color: var(--accent);
   }
   
   span.js-course-name.ellipsis {
@@ -469,7 +469,7 @@ div.flex-page-content {
   
  
   div.row.drag-element-row {
-    background-color:  var(--background);
+    background-color:  var(--accent);
   }
   
   p.js-description {
@@ -628,11 +628,11 @@ div.flex-page-content {
 
   
   aside.column.medium-12.large-3.outline-actions {
-    background-color: var(--background);
+    background-color: var(--accent);
   }
   
   div.course-outline-row.row {
-    background-color: var(--background);
+    background-color: var(--accent);
   }
   
   div.panel-content {
@@ -715,109 +715,10 @@ div span bdi{
   color: var(--subtext);
 }
 
-
-
-
-
-.base-content-item .child-is-invokable:hover{
-  background-color: var(--accent);
-}
-
-.panel-header.persistent-white-header{
-  background-color: var(--accent);
-}
-
-div.submission-card{
-  background-color: var(--accent);
-}
-
-
-
 label.toggle-label.input.label-two.js-label-toggle-grid{
   background-color: var(--background) !important;
 }
 
-
-section.panel-content.has-slide-up-section{
-  background-color: var(--background);
-}
-
-
-
 img.no.select.broken-image{
-  background-color: var(--background);
-}
-
-footer.panel-footer{
-  background-color: var(--background);
-}
-
-div.calendar-head-container{
-  background-color: var(--background);
-}
-
-div.course-tool-content{
-  background-color: var(--background);
-}
-
-div.student-grade__header__name{
-  background-color: var(--background);
-}
-
-aside.student-grade-overview.course-color-9{
-  background-color: var(--background);
-}
-aside.student-grade-overview.course-color-3{
-  background-color: var(--background);
-}
-
-
-
-div.panel-header.persistent-white-header.mode-.panel-header-directive {
-  background-color: var(--accent);
-  
-}
-
-h2.peek-title-h2 {
-  color: var(--maintext);
-}
-
-span.points-text {
-  color: var(--background);
-}
-
-span.grade-input-display.ready {
-  color: var(--background);
-}
-
-span span bdi {
-  color: var(--background);
-}
-
-footer.submit-footer.panel-footer.hide-on-full.equal-buttons.buttons-1 {
-  background-color: var(--background);
-}
-
-.panel-wrap{
-  background-color: var(--background);
-}
-
-.course .outline-details .main-instructor{
-  background-color: var(--background);
-}
-
-.course .outline-details{
-  background-color: var(--background);
-}
-
-aside.outline-details.course-color-9{
-  background-color: var(--background);
-}
-
-div div div{
-  border-color: var(--background);
-}
-
-.no-create .folder .folder-contents .empty-message{
-  background-color: var(--background);
+  background-color: #000000;
 }
